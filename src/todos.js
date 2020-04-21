@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './App.css';
 const Todos = ({ todos,deleteTodo }) => {
     const todoList = todos.length ? (
         todos.map(todo => {
