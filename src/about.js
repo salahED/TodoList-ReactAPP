@@ -8,7 +8,7 @@ const About = () => {
       </a>
       <h2 className="center blue-text"> About </h2>
       <p className="center">
-        this just a test created by me to test react routing :D{" "}
+        this just a test created by me to test react routing :D
       </p>
     </div>
   );
