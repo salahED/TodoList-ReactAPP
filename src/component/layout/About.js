@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
   return (
     <div className="todo-app container">
-      <a className="left" href="/">
+      <a className="right" href="/">
         Home
       </a>
       <h2 className="center blue-text"> About </h2>

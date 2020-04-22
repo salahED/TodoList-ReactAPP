@@ -1,41 +1,18 @@
 import React, { Component } from "react";
-import Todos from "./todos";
-import AddTodo from "./AddForm";
 import { BrowserRouter, Route } from "react-router-dom";
-import About from "./About";
+import Todo from "./component/layout/Todo";
+import About from "./component/layout/About";
+import Navbar from "./component/layout/Navbar";
 class App extends Component {
-  state = {
-    todos: [
-      { id: 1, content: "complet react course" },
-      { id: 2, content: "finish redux" }
-    ]
-  };
-  deleteTodo = id => {
-    const todos = this.state.todos.filter(todo => {
-      return todo.id !== id;
-    });
-    this.setState({
-      todos
-    });
-  };
-  addTodo = todo => {
-    todo.id = this.state.todos.length + 1;
-    let todos = [...this.state.todos, todo];
-    this.setState({
-      todos: todos
-    });
-  };
   render() {
     return (
       <BrowserRouter>
         <div className="todo-app container">
           <Route exact path="/">
-            <a className="left" href="/about">
-              About
-            </a>
-            <h1 className="center blue-text">My to do List</h1>
-            <Todos todos={this.state.todos} deleteTodo={this.deleteTodo} />
-            <AddTodo addTodo={this.addTodo} />
+            <Navbar />
+          </Route>
+          <Route exact path="/todo">
+            <Todo />
           </Route>
           <Route exact path="/about">
             <About />
