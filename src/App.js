@@ -5,6 +5,8 @@ import About from "./component/layout/About";
 import Navbar from "./component/layout/Navbar";
 import Dashboard from "./component/dashboard/Dashboard";
 import ProjectDetails from "./component/project/ProjectDetails";
+import Signin from "./component/auth/Signin";
+import Signup from "./component/auth/Signup";
 class App extends Component {
   render() {
     return (
@@ -22,6 +24,12 @@ class App extends Component {
             </Route>
             <Route path="/about">
               <About />
+            </Route>
+            <Route path="/signin">
+              <Signin />
+            </Route>
+            <Route path="/signup">
+              <Signup />
             </Route>
           </Switch>
         </div>
